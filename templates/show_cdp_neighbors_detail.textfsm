@@ -1,0 +1,13 @@
+Value DEVICE_ID (.*)
+Value LOCAL_INTERFACE (\S+\s*\S*)
+Value HOLDTIME (\d+)
+Value CAPABILITY (.*)
+Value PLATFORM (.*)
+Value PORT_ID (\S+\s*\S*)
+Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+)
+
+Start
+  ^Device ID: ${DEVICE_ID}
+  ^.*IP address: ${IP_ADDRESS}
+  ^Platform: ${PLATFORM},.*Capabilities: ${CAPABILITY}
+  ^Interface: ${LOCAL_INTERFACE},.*Port ID \(outgoing port\): ${PORT_ID} -> Record

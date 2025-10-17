@@ -1,0 +1,7 @@
+Value VLAN (\d+)
+Value MAC (\S+)
+Value TYPE (\S+)
+Value INTERFACE (\S+)
+
+Start
+  ^${VLAN}\s+${MAC}\s+${TYPE}\s+${INTERFACE} -> Record

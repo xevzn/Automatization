@@ -1,0 +1,8 @@
+Value IP (\S+)
+Value AGE (\S+)
+Value MAC (\S+)
+Value TYPE (\S+)
+Value INTERFACE (\S+)
+
+Start
+  ^Internet\s+${IP}\s+\S+\s+${AGE}\s+${MAC}\s+${TYPE}\s+${INTERFACE} -> Record
